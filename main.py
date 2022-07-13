@@ -1,4 +1,5 @@
 import requests
+import time
 from pystyle import Colors, Colorate, Write
 
 
@@ -18,4 +19,5 @@ if r.status_code == 404:
 
 if r.status_code == 200:
   requests.delete(f"{webhook}")
+  time.sleep(1)
   Write.Print(f"\nDeleted Webhook", Colors.blue_to_purple, interval=0.1)
